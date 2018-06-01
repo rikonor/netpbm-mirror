@@ -136,16 +136,6 @@ sub control($$) {
     $control{'Maintainer'} = 'Bryan Henderson <bryanh@giraffe-data.com>';
     $control{'Installed-Size'} = '6164';
     $control{'Depends'} =
-        'libc6, ' .
-        'libjpeg62, ' .
-        'libpng12-0, ' .
-        'libtiff5, ' .
-        'libx11-6, ' .
-        'libxml2, ' .
-        'zlib1g, ' .
-        'ghostscript, ' .
-        'perl, ' .
-        'perl-base, ' .
         'bash'
         ;
     $control{'Recommends'} = '';
