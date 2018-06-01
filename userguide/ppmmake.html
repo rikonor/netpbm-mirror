@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML><HEAD><title>Ppmmake User Manual</title></HEAD>
+<BODY>
+<H1>ppmmake</H1>
+Updated: 02 September 2002
+<BR>
+<A HREF="#index">Table Of Contents</A>
+
+<H2>NAME</H2>
+ppmmake - create a PPM image of a specified color and dimensions
+
+<H2 id="synopsis">SYNOPSIS</H2>
+
+<B>ppmmake</B>
+[<b>-maxval=</b><i>maxval</i>]
+<I>color</I>
+<I>width</I>
+<i>height</I>
+
+<P>All options can be abbreviated to their shortest unique prefix.
+You may use two hyphens instead of one to designate an option.  You
+may use either white space or an equals sign between an option name
+and its value.
+
+
+<H2 id="description">DESCRIPTION</H2>
+
+<p>This program is part of <a href="index.html">Netpbm</a>.
+
+<p><B>ppmmake</b> produces a PPM image of the specified color, width,
+height, and maxval.
+
+<P>Specify the color (<i>color</i>) as described for the <a
+href="libnetpbm_image.html#colorname">argument of the <b>pnm_parsecolor()</b>
+library routine</a>.
+
+
+<h2 id="example">EXAMPLES</H2>
+
+<pre>
+    ppmmake red 50 50
+</pre>
+<pre>
+    ppmmake rgb:ff/80/80 50 100 -maxval=5
+</pre>
+
+
+<H2 id="options">OPTIONS</H2>
+
+<DL>
+<DT><b>-maxval=</b><i>maxval</i>
+<DD>
+     The maxval for the generated image.  Default is 255.
+<p>
+     This option did not exist before June 2002.  Before, the maxval was
+     always 255.
+</DL>
+
+<H2 id="seealso">SEE ALSO</H2>
+
+<A HREF="pbmmake.html">pbmmake</A>,
+<A HREF="pgmmake.html">pgmmake</A>,
+<A HREF="ppmpat.html">ppmpat</A>,
+<A HREF="ppm.html">ppm</A>
+
+<H2 id="author">AUTHOR</H2>
+
+Copyright (C) 1991 by Jef Poskanzer.
+
+<HR>
+<H2 id="index">Table Of Contents</H2>
+<UL>
+<LI><A HREF="#synopsis">SYNOPSIS</A>
+<LI><A HREF="#description">DESCRIPTION</A>
+<LI><A HREF="#example">EXAMPLES</A>
+<LI><A HREF="#options">OPTIONS</A>
+<LI><A HREF="#author">AUTHOR</A>
+</UL>
+</BODY>
+</HTML>

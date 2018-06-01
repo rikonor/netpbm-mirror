@@ -1,0 +1,23 @@
+#! /bin/bash
+# This script tests: pnmpsnr
+# Also requires: pbmmake
+
+
+tmpdir=${tmpdir:-/tmp}
+
+
+w_pbm=${tmpdir}/w.pbm
+b_pbm=${tmpdir}/b.pbm
+
+pbmmake -w 10 10 > ${w_pbm}
+pbmmake -b 10 10 > ${b_pbm}
+
+pnmpsnr  ${w_pbm}  ${b_pbm} -machine
+pnmpsnr  ${w_pbm}  ${w_pbm} -machine
+pnmpsnr  ${w_pbm}  ${w_pbm} -machine -max=1000
+pnmpsnr  ${w_pbm}  ${w_pbm} -target=1000
+pnmpsnr  testimg.ppm  testimg.ppm -machine -max=300
+pnmpsnr  testimg.ppm  testimg.ppm -target=1000
+pnmpsnr  testimg.ppm  testimg.ppm -target1=1000 -target2=1000 -target3=1000
+
+rm ${b_pbm} ${w_pbm}
